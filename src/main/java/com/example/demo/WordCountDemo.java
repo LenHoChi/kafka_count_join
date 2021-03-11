@@ -22,8 +22,8 @@ import org.apache.kafka.streams.kstream.Produced;
 
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class })
 public class WordCountDemo {
-    public static final String INPUT_TOPIC = "streams-plaintext-input";
-    public static final String OUTPUT_TOPIC = "streams-wordcount-output";
+    public static final String INPUT_TOPIC = "streams-plaintext-input2";
+    public static final String OUTPUT_TOPIC = "streams-wordcount-output2";
     static Properties getStreamsConfig(final String[] args) throws IOException {
         final Properties props = new Properties();
         if (args != null && args.length > 0) {

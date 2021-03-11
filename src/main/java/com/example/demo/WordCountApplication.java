@@ -16,8 +16,9 @@ import java.util.Arrays;
 import java.util.Properties;
 @SpringBootApplication
 public class WordCountApplication {
-    public static final String INPUT_TOPIC = "streams-plaintext-input";
-    public static final String OUTPUT_TOPIC = "streams-wordcount-output";
+    //hien dang co loi chua chay duoc.
+    public static final String INPUT_TOPIC = "streams-plaintext-input1";
+    public static final String OUTPUT_TOPIC = "streams-wordcount-output1";
     public static void main(String[] args) {
         Properties props = new Properties();
         props.put(StreamsConfig.APPLICATION_ID_CONFIG, "wordcount-application");

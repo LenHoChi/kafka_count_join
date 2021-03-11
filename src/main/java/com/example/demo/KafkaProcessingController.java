@@ -35,11 +35,12 @@ public class KafkaProcessingController {
         streamsInnerJoin.start();
         Runtime.getRuntime().addShutdownHook(new Thread(streamsInnerJoin::close));
     }
-//    @Autowired
-//    KafkaProducerController kafkaProducerController;
+    @Autowired
+    KafkaProducerController kafkaProducerController;
 
     @RequestMapping("/start-stream-join/")
     public void startStreamStreamInnerJoin3Auto() throws InterruptedException {
+        System.out.println("hcl------------------------------------------------->");
         StreamsBuilder builder = new StreamsBuilder();
         KStream<String, Item> leftSource = builder.stream("my-kafka-left-stream-topic"
                 , Consumed.with(Serdes.String(), new ItemSerde()));
@@ -50,7 +51,7 @@ public class KafkaProcessingController {
                 .selectKey((key, value) -> key)
                 .join(rightSource.selectKey((key, value) -> key)
                         , (value1, value2) -> {
-                            System.out.println("value2.getName() >> " + value1.getName() + value2.getName());
+                            System.out.println("value2.getName() --------------------------------------------------->> " + value1.getName() + value2.getName());
                             value2.setCategory(value1.getCategory());
                             return value2;
                         }
@@ -61,6 +62,7 @@ public class KafkaProcessingController {
                                 new ItemSerde()
                         )
                 );
+        System.out.println("da join");
         joined.to("my-kafka-stream-stream-inner-join-out", Produced.with(Serdes.String(), new ItemSerde()));
         streamsInnerJoinStart(builder);
     }

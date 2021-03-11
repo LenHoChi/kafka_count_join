@@ -1,11 +1,14 @@
 0
-9
-__consumer_offsets 0 28
-my-kafka-right-stream-topic 0 4
-stream-stream-inner-join-KSTREAM-KEY-SELECT-0000000003-repartition 0 4
-stream-stream-inner-join-KSTREAM-KEY-SELECT-0000000002-repartition 0 2
-stream-stream-inner-join-KSTREAM-JOINOTHER-0000000013-store-changelog 0 4
-my-kafka-left-stream-topic 0 2
-streams-wordcount-output 0 0
-my-kafka-stream-stream-inner-join-out 0 1
-stream-stream-inner-join-KSTREAM-JOINTHIS-0000000012-store-changelog 0 2
+12
+streams-wordcount-output1 0 4
+wordcount-application-counts-store-changelog 0 4
+streams-wordcount-KSTREAM-AGGREGATE-STATE-STORE-0000000003-repartition 0 4
+__consumer_offsets 0 50
+streams-plaintext-input2 0 3
+hello-producer 0 6
+message.topic 0 20
+streams-wordcount-output2 0 4
+streams-plaintext-input 0 1
+wordcount-application-counts-store-repartition 0 4
+streams-plaintext-input1 0 2
+streams-wordcount-KSTREAM-AGGREGATE-STATE-STORE-0000000003-changelog 0 4
